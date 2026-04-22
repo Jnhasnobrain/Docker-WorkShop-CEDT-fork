@@ -1,14 +1,12 @@
 name: CI
 
-# TODO(step-6a): trigger the workflow on push targeting the `main` branch.
 on:
-    push:
-        branches: ["main"]
+  push:
+    # TODO(step-6a): trigger the workflow on push targeting the `main` branch.
+    branches: [ "main" ]
 
 env:
   IMAGE_NAME: workshop-app
-  # After step-6d, your Docker Hub username will live in a secret.
-  # For local tagging below we reference ${{ secrets.DOCKERHUB_USERNAME }}.
 
 jobs:
   build-scan-push:
